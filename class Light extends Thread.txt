@@ -1,0 +1,44 @@
+package com.ques2;
+
+public class Light extends Thread{
+	public void run()
+	{
+		System.out.println("RED LIGHT IS ON");
+		try {
+			Thread.sleep(3000);
+			System.out.println("RED LIGHT IS OFF");
+			System.out.println("GREEN LIGHT IS ON");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			Thread.sleep(8000);
+			System.out.println("GREEN LIGHT IS OFF");
+			System.out.println("YELLOW LIGHT IS ON");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			Thread.sleep(10000);
+			System.out.println("YELLOW LIGHT IS OFF");
+			System.out.println("RED LIGHT IS ON");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		Thread t1 = new Thread();
+	
+		t1.start();
+		
+		
+
+	}
+
+}
